@@ -1,0 +1,188 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="Directory.css">
+  <title>My ISP Project</title>
+  </head>
+  
+  <body style="background-color:LightCoral;">
+    <header>
+      <div class="container">
+	<nav>
+	  <ul>
+	    <li><a href="https://www.codermerlin.com/users/james-dungan/Digital%20Portfolio/index.html">About Me</a></li>   
+	    <li><a href="https://www.codermerlin.com/users/james-dungan/Digital%20Portfolio/Links.html">Directory of classes</a></li>   
+	    <li><a href="https://www.codermerlin.com/users/james-dungan/Digital%20Portfolio/ISP.html">My ISP project</a></li>   
+	    <li><a href="https://www.codermerlin.com/users/james-dungan/Digital%20Portfolio/Fingerprints.html">Fingerprints</a></li>
+	    <li><a href="https://www.codermerlin.com/users/james-dungan/Digital%20Portfolio/Why.html">Why a Digital Portfolio is Important to Me</a></li>
+	  </ul>
+	</nav>
+	</div>
+	</header>
+
+    <div class="center">
+    <h1> My ISP project 2021-2022</h1>
+
+    <h2 style="font-size:30px;">Concept and Motivation:</h2>
+    <p>The concept for my ISP was to recreat the retro arcade game Pacman using the Igis platform. The motivation behind our choice was all of the members of the team had played Pacman when we were all younger and we wanted to try to recreate this game in the Igis platform. </p><br>
+
+    <img src="Pac.jpg" height="300" width="500">
+    
+    <h2 style="font-size:30px;">Code Segments and Explanations</h2>
+
+    <<pre> <code class="code">
+	   class Ghost : RenderableEntity {
+
+    
+    let ghostColor:FillStyle
+    var ghostRect:Rect
+    var ghostRectangle:Rectangle
+
+    var flashing:Bool
+    var flashFor:Int
+    var flashColor:FillStyle
+
+    var gameOver:Bool
+    var win:Bool
+    
+    init(color: Color) {
+        ghostColor = FillStyle(color:color)
+        ghostRect = Rect(topLeft:Point.zero, size:Size(width:30, height:30))
+        ghostRectangle = Rectangle(rect:ghostRect, fillMode:.fillAndStroke)
+        
+        flashing = false
+        flashFor = 0
+        flashColor = FillStyle(color:Color(red:192, green:192, blue:192))
+
+        gameOver = false
+        win = false
+        
+        super.init(name:"Ghost")
+    }
+
+    // makes the ghost flash, this would have been used if we implemented the ghost being eaten
+    func flash(for amount:Int){
+        self.flashFor = amount * 20
+        self.flashing = true
+    }
+
+    override func setup(canvasSize:Size, canvas:Canvas) {
+        //empty
+    }
+
+    //moves the ghost to a specified point
+    func move(to point:Point){
+        self.ghostRect.topLeft = point
+    }
+
+    //moves the ghost up
+    func ghostUp(_ amount:Int) {
+        self.ghostRect.topLeft.y -= amount
+    }
+
+    //moves the ghost down
+    func ghostDown(_ amount:Int) {
+        self.ghostRect.topLeft.y += amount
+    }
+
+    //moves the ghost left
+    func ghostLeft(_ amount:Int) {
+        self.ghostRect.topLeft.x -= amount
+    }
+
+    //moves the ghost right
+    func ghostRight(_ amount:Int) {
+        self.ghostRect.topLeft.x += amount
+    }
+
+    //These four functions make bounding rectangles that help detect if the ghost will hit a wall when it moves.
+    func topBoundingRect() -> Rect{
+        return Rect(topLeft:self.ghostRect.topLeft - Point(x:0, y:self.ghostRect.size.height), size:self.ghostRect.size)
+    }
+    
+    func bottomBoundingRect() -> Rect{
+        return Rect(topLeft:self.ghostRect.bottomLeft, size:self.ghostRect.size)
+    }
+
+    func leftBoundingRect() -> Rect{
+        return Rect(topLeft:self.ghostRect.topLeft - Point(x:self.ghostRect.size.width, y:0), size:self.ghostRect.size)
+    }
+
+    func rightBoundingRect() -> Rect{
+        return Rect(topLeft:self.ghostRect.topRight, size:self.ghostRect.size)
+    }
+    
+    override func render(canvas:Canvas){
+        
+            ghostRectangle = Rectangle(rect:ghostRect, fillMode:.fillAndStroke)
+            if flashing{
+                if flashFor % 5 == 0 {
+                    canvas.render(flashColor, StrokeStyle(color:Color(.gray)), LineWidth(width:2), ghostRectangle)
+                }else{
+                    canvas.render(ghostColor, StrokeStyle(color:Color(.gray)), LineWidth(width:2), ghostRectangle)
+                }
+                flashFor -= 1
+                if flashFor == 0{
+                    flashing = false
+                }
+            }else{
+                canvas.render(ghostColor, StrokeStyle(color:Color(.gray)), LineWidth(width:2), ghostRectangle)
+            }
+            //canvas.render(FillStyle(color:Color(.white)), Rectangle(rect:self.bottomBoundingRect(), fillMode:.fill))
+        }   
+}
+</pre></code>
+    <p> The code above allowed us to move the ghosts as well as make the ghosts flah and detect if they had run into walls and to move away from them if they had.</p><br>
+
+   <pre> <code class="code">    override func setup(canvasSize:Size, canvas:Canvas) {
+        coin.center = Point(x:50, y:75)
+        let xCoins = (canvasSize.width - 140) / 40
+        let yCoins = (canvasSize.height - 140) / 40
+        for y in 0...yCoins{
+            for x in 0...xCoins{
+                coin.center += Point(x:40, y:0)
+                coins.append((Ellipse(center:coin.center, radiusX:5, radiusY:5, fillMode:.fillAndStroke), true))
+            }
+            coin.center += Point(x:-((xCoins+1) * 40), y:40)
+        }
+    }
+    
+    override func render(canvas:Canvas){
+        for c in coins{
+            if c.1 == true{
+                canvas.render(FillStyle(color:Color(.goldenrod)), StrokeStyle(color:Color(.white)), c.0)
+            }
+        } 
+</code></pre>
+    <p> The code above creates the model for the Coin and then creates tons of coins that are seperated across the Map we created</p><br>
+
+
+    <pre><code class="code">
+	    //Function creates a black end screen that tells the player if they won or lost
+    func gameOver(canvas:Canvas, win:Bool){
+        let canvasSize = canvas.canvasSize!
+        if win == true{
+            canvas.render(FillStyle(color:Color(.black)),Rectangle(rect:Rect(topLeft:Point(x:0,y:0), size:canvasSize), fillMode:.fill))
+            let winText = Text(location:canvasSize.center - Point(x:150, y:-50), text:"You Won!", fillMode:.fill)
+            winText.font = "50pt Arial"
+            canvas.render(FillStyle(color:Color(.white)), winText)
+            self.gameOver = true
+            self.win = true
+        }else{
+            canvas.render(FillStyle(color:Color(.black)),Rectangle(rect:Rect(topLeft:Point(x:0,y:0), size:canvasSize), fillMode:.fill))
+            let winText = Text(location:canvasSize.center - Point(x:150, y:-50), text:"You Lost!", fillMode:.fill)
+            winText.font = "50pt Arial"
+            canvas.render(FillStyle(color:Color(.white)), winText)
+            self.gameOver = true
+        }
+    }
+    </pre></code>
+    <p>The code above creates what happens when a character loses or wins determining on wether they have been consumed by a ghost or collected enough coins for them to win. The Game will Flash to a black Screen with the words You Win! or You Lost! Respectedly .</p><br>
+    <h2 style="font-size:30px;">Conclusions</h2>
+    <p>The production of the game actually went quite smoothly which can probably be atributed to the amazing teamwork between my partners and I. We didn't expect to have so much trouble on the ghosts because, in theory the ide is pretty simple the ghost follows pacman. However in practice this proved to be a greater challenge then we anticipated. We fixed this problem by doing lots of research on pathfinding and understood enough to put together a pretty crude but working set of functions that allows the ghosts to track the players movements and follow the player.</p>
+
+
+</div>
+
+
+  </body>
+</html>
