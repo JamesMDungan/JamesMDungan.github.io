@@ -96,3 +96,15 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+.double {
+    line-height: 2;
+}
+
+.tab {
+    margin-left: 650px;
+}
+
+.paragraph {
+    margin-left: 550px;
+}
