@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <link rel="stylesheet" type="text/css" href="Directory.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Directory.css">
   <title>Fingerprints</title>
   </head>
   
@@ -28,61 +29,16 @@
       <p>Computer Science II</p>
       <p>Mr. Ben-Yaakov</p><br>
     </div>
-    <p class="double tab">The internet today is a wild place. Everyday you here about more and more people getting scammed or there information stolen. Which can</p>
-    <p class="double paragraph">leave us wondering what websites can be trusted? The answer to this might be simplar than you think and has been looking at you from the search bar all along.</p>
+    <div class="left">
+    <p class="double">The internet today is a wild place. Everyday you here about more and more people getting scammed or there information stolen. Which can leave us wondering what websites can be trusted? The answer to this might be simplar than you think and has been looking at you from the search bar all along. For years most websites used HTTP or Hypertext Transfer Protocol for transmitting hypermedia documents for example html which is what this website is made out of. However HTTP had a major flaw that being unwanted parties could access the website and steal data such as your credit card information or other important data. This led to the eventual creation of HTTPS or Hypertext Transfer Protocol Secure this was essentially HTTP however had the primary purpose to keep others from eavsdropping on sensative information as well as to have the connection of the user to the web authenticated, encrypted and secure. This was to protect your data from MITM which stands for Man In The Middle this is a general term for when a perpetrator positions himself in a conversation between
+a user and an application this presents the risk of leaked information as the perpetratorcan steal important information such as credit card details or social security numbers.</p><br>
 
-    <p class="double paragraph">For years most websites used HTTP or Hypertext Transfer Protocol for transmitting hypermedia documents for example html which is what this website is made</p>
-
-    <p class="double paragraph">out of. However HTTP had a major flaw that being unwanted parties could access the website and steal data such as your credit card information or other important</p>
-
-    <p class="double paragraph">data. This led to the eventual cration of HTTPS or Hypertext Transfer Protocol Secure this was essentially HTTP however had the primary purpose to keep others</p>
-
-    <p class="double paragraph"> from eavsdropping on sensative information as well as to have the connection of the user to the web authenticated, encrypted and secure.</p>
-
-    <p class="double paragraph">This was to protect your data from MITM which stands for Man In The Middle this is a general term for when a perpetrator positions himself in a conversation between</p>
-
-    <p class="double paragraph">a user and an application this presents the risk of leaked information as the perpetratorcan steal important information such as credit card details or social security numbers.
-      
-    <p class="double tab">This increase in personal security was revolutionary for the individual as they could now safely browse the web free of the fear that there information might be</p>
-
-    <p class="double paragraph">stolen. Businesses and Schools however were not so keen on these changes as they now lacked much of the information they once possesed that being the details of employees</p>
-
-    <p class="double paragraph">/students internet usage. Thus, to counteract this "Going Dark Problem" they started using a HTTPS proxy appliance. This new technology circumvents security</p>
-
-    <p class="double paragraph">and privacy of a web application. This begs the question do these businesses and schools have a right to eavsdrop on your communications. Which sadly the answer </p>
     
-    <p class="double paragraph">is yes. If you're doing anything they would consider suspicious they can access your internet data. However for the average person it wouldn't take much for them</p>
+    <p class="double">This increase in personal security was revolutionary for the individual as they could now safely browse the web free of the fear that there information might be stolen. Businesses and Schools however were not so keen on these changes as they now lacked much of the information they once possesed that being the details of employees/students internet usage. Thus, to counteract this "Going Dark Problem" they started using a HTTPS proxy appliance. This new technology circumvents security and privacy of a web application. This begs the question do these businesses and schools have a right to eavsdrop on your communications. Which sadly the answer is yes. If you're doing anything they would consider suspicious they can access your internet data. However for the average person it wouldn't take much for them to get your information if they needed it. Governments and Police can easily get copies of your online activity without needing a warrant. Not to mention your ISP or Internet Service Providercan track if you go to suspicious websites then alert the authorities. You can however bypass the tracking of an ISP with a VPN or Virtual Private Network which will secure all your data and assures it cannot be tracked.</p><br>
 
-    <p class="double paragraph">to get your information if they needed it. Governments and Police can easily get copies of your online activity without needing a warrant. Not to mention</p>
+    <p class="double">So how do your businesses look into you internet usage. Well most of the time they use a SSL Proxy Appliance which decrypts inspects and judges your content. So now you might be wondering how can I prevent this. Well sorry to tell you but It can't be prevented. However it can be detected. You see to prevent security and privacy a third party who we can trust has told us that our encrypted traffic is going to the right location. They do this through CA's or Certificate Authorities to whom a websites reveal their identity in the real world usind documentation. When a website has thoroughly proven their existence the CA will approve them by giving them a site security certificate putting their own reputation by doing so. So if the website certificate presented to you will be different from the one you get when opening the site from a personal device. If the public keys and/or certificate fingerprints of the certificates don't match then there is most likely SSL interception occuring. You see if anyone examining a website can create a hash. Whats a hash you might be wondering? Well hashes are complex mathematical algorithm which carefully process every single bit of what they obtain and if even one part inside the certificate is changed, half the fingerprints hash bits will change esentiall creating a new fingerprint no matter how small. Now this system isn't perfect and is sometimes subject to errors such as a false-positives when multiple unique visitors are associated with the same fingerprint. As well as false-negatives when one visitor over a number of visits is assigned different fingerprints. So In conclusion there are several ways the internet has tried to become more secure throughout the years and although many have made it a more safe place. There are still ways to bypass these security measures which can't be prevented but can be detected.</p><br>
 
-    <p class="double paragraph">your ISP or Internet Service Providercan track if you go to suspicious websites then alert the authorities. You can however bypass the tracking of an ISP</p>
-
-    <p class="double paragraph">with a VPN or Virtual Private Network which will secure all your data and assures it cannot be tracked.</p>
-
-    <p class="double tab">So how do your businesses look into you internet usage. Well most of the time they use a SSL Proxy Appliance which decrypts inspects and</p>
-
-    <p class="double paragraph">judges your content. So now you might be wondering how can I prevent this. Well sorry to tell you but It can't be prevented. However it can be detected. You see</p>
-
-    <p class="double paragraph">to prevent security and privacy a third party who we can trust has told us that our encrypted traffic is going to the right location. They do this through CA's</p>
-
-    <p class="double paragraph">or Certificate Authorities to whom a websites reveal their identity in the real world usind documentation. When a website has thoroughly proven their existence</p>
-
-    <p class="double paragraph">the CA will approve them by giving them a site security certificate putting their own reputation by doing so. So if the website certificate presented to you </p>
-
-    <p class="double paragraph">will be different from the one you get when opening the site from a personal device. If the public keys and/or certificate fingerprints of the certificates don't</p>
-
-    <p class="double paragraph">match then there is most likely SSL interception occuring. You see if anyone examining a website can create a hash. Whats a hash you might be wondering? Well</p>
-
-    <p class="double paragraph">hashes are complex mathematical algorithm which carefully process every single bit of what they obtain and if even one part inside the certificate is changed,</p>
-
-    <p class="double paragraph">half the fingerprints hash bits will change esentiall creating a new fingerprint no matter how small. Now this system isn't perfect and is sometimes subject to</p>
-
-    <p class="double paragraph">errors such as a false-positives when multiple unique visitors are associated with the same fingerprint. As well as false-negatives when one visitor over a number</p>
-
-    <p class="double paragraph">of visits is assigned different fingerprints. So In conclusion there are several ways the internet has tried to become more secure throughout the years and although</p>
-
-    <p class="double paragraph">many have made it a more safe place. There are still ways to bypass these security measures which can't be prevented but can be detected.</p><br>
-
+    </div>
     <div class="mxgraph" style="max-width:100%;border:1px solid transparent" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-08-26T00:21:10.156Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36\&quot; etag=\&quot;sWBmjG17_4R9ZODNGGwy\&quot; version=\&quot;20.2.7\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;C5RBs43oDa-KdzZeNtuy\&quot; name=\&quot;Page-1\&quot;&gt;5Vptc5s4EP41nul9aAeEwfhrnDiXttc3Xy7NRxk2RikgKkRs99ffCgQYy5ejbRrcZCbJSKsVErv7rB4tGTmzZHMuaBb9xUOIR8QKNyPndESIPSZkpH6scFtJJp4WrAQLtVIrWLBvoIWWlhYshLyjKDmPJcu6woCnKQSyI6NC8HVX7YbH3VUzugJDsAhobEqvWCijSuqTSSv/E9gqqle2vWk1ktBaWb9JHtGQr3dEztnImQnOZdVKNjOIlfFqu1xdbK/it1+889cf86/08uTN3+/+eVk9bP49U5pXEJDKH370+5e3n9jm4+VtsJ3OC7i8WfhXeop1R+NC22vGE1yIpStl/1T9KWSE67JAWR/lIDIclthbM7SQ0uKoIbAlQAoGdxAqVcETNYi/S+VFEC+KvHrsOecrdA/6PEIlKL2qpsOGJlkMf2hzy23tQ8GLNAT1HtbIOVlHTMIio4EaXWPUoiySSYw9G5v6jUBI2OyFwP/Yz26cimgA3JkUW5ynn+JqW23r+Nb9dRtVTq0T7UTUVMuoDuRV8+TWWdjQ/voO3zmG7wzDQYhY0F0uZMRXPKXxWSs96Zq21XnLeaYNegtSbjWwMRj4IXOrhX7A2LhZXogA7nnLOmdQsQJ5jx457DwBMZXsrru5B3eFbbhigRuWpj/iGPMeHE0Qk4kZxDY5EMRNtD+86cizCGPSM4zt//Df48Sx6YtZzIIvKOLqKMA0j39jXkouglLG2gGd53O1szAUkKvWkorjzOfE2cOC3xML/q+CAnkeUPB6QmE6JBI8M6Mj3Qmikr4qOgySsjjvIiOFdRk/qeKJihiFFVyohFKnSJY1d6KyhQ2XsuRK/KbFGMtlSZaOETmu30WO6wyOHJMLvXs/BHZgw+RnPV21r1X7lat7p5udodNt3UnRBJ9bRdW9rp+nOu20slfP+9U4nfY9svxBjyzXcP312eIp5s2+/iDjIf0xNdxxkTdpbb57f5x3EmKlkNPyPkjbKTyFbpI9/4Qbsz6U1/65mSAjniyLfMDk6JJXbic9et6B9DhxHzE92iZGniJA7L53RXtQhNjmbbFm2R2CbRCLstSlRCV50AUzVqnRZTuSR6pqRqwiGxGPJirw02WeNR44Nj4xto6NiduT5wGYcV/AeIMCZmx4Aw+SsEHHDCOS3TBNs/W9VBUtlQ0gVlVlXEEjo4jLidWyW16oMItAFzDLMmTK2/OoAzKmQBVUi6ka5zFiaZ+bD48lYtaYB+LmNc9uOjvsfECebfe9EP800dZTP/CKctXpl3RDZuzuhUK1MT1rLxqabfxEgJjn4ZNMtn3dPGyuNQsfpxxaOo6M4muhvnidsDwvyi89qh5SC1X6rCh8QnW1ZIe0Z8dL2vcgYB/Imv6jMhDf8MM1Rtj+kZSUWyHWUhkZw6oqGlmIVMBozOSBY2rwbxDNp+H7jP24R5RJMA4Zuzz/K3bwm5h6nw34Bz5aPpSpsdt+C6/OhvY/CpyzfwE=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
     <script src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 

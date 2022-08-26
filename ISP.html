@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
   <link rel="stylesheet" type="text/css" href="Directory.css">
   <title>My ISP Project</title>
+  <meta charset="UTF-8">
   </head>
   
   <body style="background-color:LightCoral;">
@@ -25,11 +27,11 @@
     <h2 style="font-size:30px;">Concept and Motivation:</h2>
     <p>The concept for my ISP was to recreat the retro arcade game Pacman using the Igis platform. The motivation behind our choice was all of the members of the team had played Pacman when we were all younger and we wanted to try to recreate this game in the Igis platform. </p><br>
 
-    <img src="Pac.jpg" height="300" width="500">
+    <img src="Pac.jpg" alt="Pacman">height="300" width="500">
     
     <h2 style="font-size:30px;">Code Segments and Explanations</h2>
 
-    <<pre> <code class="code">
+    <pre> <code class="code">
 	   class Ghost : RenderableEntity {
 
     
@@ -130,7 +132,7 @@
             //canvas.render(FillStyle(color:Color(.white)), Rectangle(rect:self.bottomBoundingRect(), fillMode:.fill))
         }   
 }
-</pre></code>
+</code></pre>
     <p> The code above allowed us to move the ghosts as well as make the ghosts flah and detect if they had run into walls and to move away from them if they had.</p><br>
 
    <pre> <code class="code">    override func setup(canvasSize:Size, canvas:Canvas) {
@@ -175,7 +177,7 @@
             self.gameOver = true
         }
     }
-    </pre></code>
+    </code></pre>
     <p>The code above creates what happens when a character loses or wins determining on wether they have been consumed by a ghost or collected enough coins for them to win. The Game will Flash to a black Screen with the words You Win! or You Lost! Respectedly .</p><br>
     <h2 style="font-size:30px;">Conclusions</h2>
     <p>The production of the game actually went quite smoothly which can probably be atributed to the amazing teamwork between my partners and I. We didn't expect to have so much trouble on the ghosts because, in theory the ide is pretty simple the ghost follows pacman. However in practice this proved to be a greater challenge then we anticipated. We fixed this problem by doing lots of research on pathfinding and understood enough to put together a pretty crude but working set of functions that allows the ghosts to track the players movements and follow the player.</p>

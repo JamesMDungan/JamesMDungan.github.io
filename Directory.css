@@ -24,6 +24,10 @@ p {
     
 }
 
+.left {
+    text-align: left;
+}
+
 .code {
     display: block;
     border: 10px solid gray;
@@ -98,11 +102,14 @@ nav a:hover::before {
 }
 
 .double {
-    line-height: 2;
+    line-height: 3;
+    text-indent: 50px;
+    padding-left: 800px;
+    padding-right: 800px;
 }
 
 .tab {
-    margin-left: 650px;
+    margin-left: 50px;
 }
 
 .paragraph {
