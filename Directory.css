@@ -104,12 +104,15 @@ nav a:hover::before {
 .double {
     line-height: 3;
     text-indent: 50px;
-    padding-left: 800px;
-    padding-right: 800px;
+    padding-left: 60vh;
+    padding-right: 60vh;
 }
 
 .tab {
-    margin-left: 50px;
+    line-height: 3;
+    padding-left: 60vh;
+    padding-right: 60vh;
+    font-size: 14px;
 }
 
 .paragraph {
