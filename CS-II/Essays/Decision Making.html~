@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../Directory.css">
+    <title>Decision Bias Essay</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+	<nav>
+	  <ul>
+	    <li><a href="../../index.html">About ME</a></li>
+	  </ul>
+	</nav>
+      </div>
+    </header>
+
+    <div class="center">
+      <h1>Decision Making</h1>
+      <h2>Biases in Decision Making</h2>
+      <p>James Dungan</p>
+      <p>Allen STEAM Center</p>
+      <p>Computer Science II</p>
+      <p>Mr. Ben-Yaakov</p><br>
+    </div>
+    <div class="left">
+      <p class="double"> Bias is a weird concept, because everyone has it. Even those who don't even beleive they have any bias can have subconcious bias toward or against something, that sonetimes the people have no control over. So, how in the world are we gonna try to fix biases that might occur toward our game. Well first we need to identify what our game is about and what possible biases that players might have against the game. The game our team is developing is called Goose Simulator: A not so ordinary goos game. In this game the player gets to control a goose that can move around a city and cause all sorts of mayhem, the player has complete control of the goose and can control the environment around him as he sees fit. For example, if the goose wants to rob a bank he is free to do so. So what kind of biases wuld be an issue for this game that seems so ridiculous, well lets narrow the list down to five. The five Bias that have the greatest chances of affecting our game are, Test bias, Similarity Bias, Self-Serving Bias, Inconsistency Bias, and Control Bias. Now lets take a closer look at these Biases and talk about how we can address the problems that they bring to our game.</p></div>
+
+    <div class="center">
+      <img src="https://i.etsystatic.com/6394987/r/il/11401d/2765002761/il_fullxfull.2765002761_4r5s.jpg" alt="goose" width="500" length="500">
+    </div>
+    <div class="left">
+      <p class="double"> Test Bias, is a bias that is defined by APA Dictionary as "the tendency of scores on a test to systematically over- or underestimate the true performance of individuals to whom that test is administered, particularly because they are members of specific groups (e.g., ethnic minorities, one or the other gender)"(APA Dictionary Editors 1). We suffer with this bias because we (the team) are creating this game, and the team is nearly all(80%) teenage boys. This could raise issues due to the fact that we have the same perspective on many ideas. Given this we are unconsiously designing this game to tailor to teenage boys because we are simply coding what we think would be funny at any given moment. To solve this problem we must think about and take input from other sources than those from our demographic. For example, we have reached out to female friends such as Berkely Voss and Hannah Bartlett for input about how out ISP was coming out. Once we had their thoughts and criticism we changed the parts of the ISP we deemed necessary. Thus we are working to eliminate Test Bias from our project.</p>
+
+      <p class="double"> Similarity Bias, is a bias is where we prefer what is like us over what is different. Now you are probably asking yourself James didn't you just talk about this with Test Bias and how you veiws are different than others because you're a teenage boy. Well first of all i'm glad you actually read that last paragraph and secondly while that is true thats not what connects Similarity Bias to our projects. Now Similarity Bias (which some call the racist bias (its a real thing)), applies to our project because we have egos. Given that we are STEM kids we do have egos when it comes to this project some larger than others *cough*<i>Jacob</i>*cough*. With this ego we have trouble taking criticism from others regarding this project. We like what is like us when we discuss our project because we all like the ISP and have trouble finding errors in our Ideas. We have addressed this problem by constantly talking about what eeds to be improved about the ISP even if its the smallest of details. This assures that we can stay on track with improving our ISP while being able to still work together without bashing eachothers egos *cough*<i>Jacob</i>*cough*. Thus we are working to eliminate Similarity Bias fom our project.</p>
+
+      <p class="double">Self-Serving Bias, is the tendency people have to seek out information and use it in ways that advance their self-interest. This indicates that a person will tend to assume that good outcomes are the result of positive actions that that person has done and bad outcomes are the result of other people's mistakes or outside forces. We suffer this because some of our members *cough*<i>Soohan</i>*cough* are way better than others in our group *cough*<i>Me</i>*cough*, because of the large skill gap between some of our members it can be difficult to communcate and get the amount of help they need. For exampe there are things that Soohan will code for the game that I could never understand so its more difficult or him to ask us or help. We are tackling this by continuing our skills and realizing that its not a individal effort but a team effort. Thus we are working to eliminate Self-Serving Bias from our project</p>
+
+    </div>
+    <div class="center">
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vRsW2-C-PB6VJ4VWgU3afFwOynRFwzd70zZki0b0Kq8WqRH7d0ETbq2YADsoETs5UIcOsd7oqn7bHRA/pub?embedded=true" width="500" height="300"></iframe>
+    </div>
+    <div class="left">
+      <p class="double"> Inconsistency Bias, is the tendency for people to change there opinion on a subject due to a change in the sbject material. This is a growing problem that we are facing in our ISP, the probelm with making a game like Goose Simulator is that there really isn't a lot of consistency throughout the game due to lots of chaos which makes the game complicated to understand and to code at times. The game is designed on the principles of the player being able to cause as much chaos as they want. Now this chaos is a pain because of the inconsistency. For example, in some games the rules are set so the player can ony go down certain paths and play the game how the developers intended, but with Goose simulator there isn't a certain way its designed to be played. This becomes a problem in our project because we must constantly think of new ways that people must play the game and our entire project changes from area to area. We are trying to fix this by communicating often with each other and trying to limit our imagination to not overexpand ourselves on different features in the game that might not even be wanted much less needed. Thus we are working to eliminate Inconsistency Bias from our project.</p>
+
+      <p class="double">Control Bias, is the tendency of human beings to believe that they can control or at least influence outcomes when, in fact, they cannot. When subject to illusion of control bias, people feel as if they can exert more control over their environment than they actually can. This relates to our project because although we had made the decision to create this game as a simulator where the player can create as much chaos as they desire we had to make a decision as a team to limit thee bounds. This is because if we were not to set up a limit on how far we were willing to go we would be coding this game forever instead of the couple of months we have. Right now we are using Control Bias to try and make th player think they have alot more control over there game then they really do, giving them theoretically endless options but closing them off. Hopefully we can fix theis over time by being able to fiish the basic game and beable to expand further on the game.</p>
+
+      <p class="double">These are only 5 biases that pertain to our project and our team. This assignment has really made me look at alot of the games and apps I use and how they use Bias everyday. It has really opened up my eyes(don't know if thats good or bad yet). Biases although we may not like it sometimes are all around us and if we can identify them and fix them we can improve our day to day life, our time on the internet, and our games and projects.</p>
+
+      

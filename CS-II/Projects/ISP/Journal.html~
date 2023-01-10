@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/users/james-dungan/Digital%20Portfolio/Directory.css">
+  </head>
+  <header>
+    <div class="container">
+      <nav>
+	<ul>
+	  <li><a href="../../../index.html">About Me</a></li>
+	</ul>
+      </nav>
+    </div>
+  </header>
+  <div class="center">
+    <h1>ISP Journal</h1>
+    <h3><B>2-Jan-2023</B></h3>
+    <h4>Roles</h4>
+  </div>
+  <div class="left">
+    <p class="double"> A Development Engineer is the member who creates new code and improves existing code. Personally I don't feel that I would be the best suited for this position in my team. I don't beleive I am a terrible coder but I am definitly not the best in my group. I feel that I would have trouble navigating the complications of this large project especially in a language that im not all together familiar with. Lua while not a terrible challenging language can get pretty confusing if you don't know what you are doing which I feel in most cases I would not. So for me to be placed in this position would be simply ludicrous (get it cause project name is ludicrous). I would solve this problem by dedicating extra time to understanding lua and especially Roblox game design.</p>
+    <p class="double"> A QA Engineer is the member ensures that the software passes all tests before being released to the public. I feel as if I would be adequate in this role but not exceptional. I do love testing games to there limits however I feel as if there are other more qualified members on my team for this position. I survive in this position but I would not thrive which is not ideal for the development of our game. I feel like a major issue would be allocating this position to just one individual, since everyone is creating there own mechanics 1 tester might miss those they did not add themselves. To solve this we will create lists of all features in our game and update it regularly to make the QA Engineers life easier.</p>
+    <p class="double"> A Project manager is the member that is in charge of planning and the execution of the project. I feel as if this position would actually suit me because I am very good at solving interpersonal problems as well as general leadership. I think that in this position I could most benefit the team with the leadership skills that I have, and my ability to keep the environment light while keeping the team on task. I feel like the largest problem would be communication across the team since we don't have a simple easy way to get to all members it will be difficult to communicate and coordinate progress on the game. I will solve this by instructiong those in the group that do not have discord to install it and by creating a mutual server where we can share Ideas and communicate.</p>
+    <p class="double"> A Product manager is the member who identifies the customer need and the larger business objectives that a product or feature will fulfill. I feel like I would be decenty suited for this position. I feel like as far as consumers in the game market go I might be the most experienced in our team. I feel this way because of the countless hours I have spent looking at gaming trends and forums of popular games related to our project such as Goat simulator. With this knowledge I feel like I can steer our project in the right direction for those playing the game. The greatest issue would be the ever changing market for games. I would address this problem by constantly staying on top of our competitors reveiws and forums to ensure we have the best game for the consumers.</p>
+    <p class="double"> A Release manager responsible for the release management lifecycle, focusing on coordinating various aspects of production and projects into one integrated solution. They are responsible for ensuring that resources, timelines, and the overall quality of the process are all considered and accounted for. I feel as if I would be mediocre in this position  I would definitly face the challenge of thinking in the large picture. I would solve this problem by regularly keeping in touch with the team members and there progress in different parts of the game.</p>
+      
+  </div>
+  
