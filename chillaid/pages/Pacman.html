@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--
+Template Name: Chillaid
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Pacman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <h1 class="logoname"><a href="../index.html">Digital<span>P</span>ortfolio</a></h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <nav id="mainav" class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Pages</a>
+          <ul>
+            <li><a href="Essays.html">Essays</a></li>
+            <li><a href="Classes.html">Classes</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="About-Me.html">About Me</a></li>
+            <li><a href="font-icons.html">Font Icons</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">Dropdown</a>
+          <ul>
+            <li><a href="#">Level 2</a></li>
+            <li><a class="drop" href="#">Level 2 + Drop</a>
+              <ul>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Level 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Link Text</a></li>
+        <li><a href="#">Link Text</a></li>
+        <li><a href="#">Link Text</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url('../images/demo/Hex.jpg');">
+  <div id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Pacman.html"></a>Pacman</li>
+    </ul>
+    <article>
+      <h3 class="heading"><B>Pacman ISP</B> Jan-2022</h3>
+      <h4 class="heading">my second year ISP</h4>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class ="content">
+        <h1>Pacman ISP</h1>
+        <p>For our computer science project, we embarked on an exciting endeavor to recreate the classic arcade game Pac-Man using HTML, CSS, and JavaScript. Leveraging the power of web technologies, we aimed to bring the nostalgic charm of Pac-Man to modern browsers while honing our skills in web development.</p>
+        <p>The project began with careful planning and design. We sketched out the game mechanics, including Pac-Man's movement, the maze layout, and the behavior of the ghosts. With a clear vision in mind, we divided tasks among team members, assigning responsibilities for coding, design, and testing.</p>
+        <p>Using HTML, we constructed the foundation of the game, including the layout of the maze and the graphical elements such as Pac-Man, the ghosts, and the pellets. CSS was then employed to style the game elements, bringing them to life with vibrant colors and animations. We paid close attention to detail, ensuring that the game faithfully captured the essence of the original Pac-Man experience.</p>
+        <p>The heart of the project lay in the JavaScript code, where we implemented the game logic and mechanics. We programmed Pac-Man's movement, the ghosts' behavior, collision detection, scoring system, and win/lose conditions. It was a challenging but rewarding process, requiring meticulous debugging and optimization to ensure smooth gameplay.</p>
+        <p>Throughout development, we continuously tested the game, identifying and addressing any bugs or issues that arose. While we didn't release the game publicly, it served as a valuable learning experience and a testament to our passion for programming and game development. Our Pac-Man project was a personal achievement, showcasing our technical skills and creativity in bringing a beloved classic to life in the digital realm.</p>
+        <pre><code class="code">class Ghost : RenderableEntity {
+          let ghostColor:FillStyle
+          var ghostRect:Rect
+          var ghostRectangle:Rectangle
+      
+          var flashing:Bool
+          var flashFor:Int
+          var flashColor:FillStyle
+      
+          var gameOver:Bool
+          var win:Bool
+          
+          init(color: Color) {
+              ghostColor = FillStyle(color:color)
+              ghostRect = Rect(topLeft:Point.zero, size:Size(width:30, height:30))
+              ghostRectangle = Rectangle(rect:ghostRect, fillMode:.fillAndStroke)
+              
+              flashing = false
+              flashFor = 0
+              flashColor = FillStyle(color:Color(red:192, green:192, blue:192))
+      
+              gameOver = false
+              win = false
+              
+              super.init(name:"Ghost")
+          }
+          // makes the ghost flash, this would have been used if we implemented the ghost being eaten
+          func flash(for amount:Int){
+              self.flashFor = amount * 20
+              self.flashing = true
+          }
+      
+          override func setup(canvasSize:Size, canvas:Canvas) {
+              //empty
+          }
+      
+          //moves the ghost to a specified point
+          func move(to point:Point){
+              self.ghostRect.topLeft = point
+          }
+      
+          //moves the ghost up
+          func ghostUp(_ amount:Int) {
+              self.ghostRect.topLeft.y -= amount
+          }
+      
+          //moves the ghost down
+          func ghostDown(_ amount:Int) {
+              self.ghostRect.topLeft.y += amount
+          }
+      
+          //moves the ghost left
+          func ghostLeft(_ amount:Int) {
+              self.ghostRect.topLeft.x -= amount
+          }
+      
+          //moves the ghost right
+          func ghostRight(_ amount:Int) {
+              self.ghostRect.topLeft.x += amount
+          }
+      
+          //These four functions make bounding rectangles that help detect if the ghost will hit a wall when it moves.
+          func topBoundingRect() -> Rect{
+              return Rect(topLeft:self.ghostRect.topLeft - Point(x:0, y:self.ghostRect.size.height), size:self.ghostRect.size)
+          }
+          
+          func bottomBoundingRect() -> Rect{
+              return Rect(topLeft:self.ghostRect.bottomLeft, size:self.ghostRect.size)
+          }
+      
+          func leftBoundingRect() -> Rect{
+              return Rect(topLeft:self.ghostRect.topLeft - Point(x:self.ghostRect.size.width, y:0), size:self.ghostRect.size)
+          }
+      
+          func rightBoundingRect() -> Rect{
+              return Rect(topLeft:self.ghostRect.topRight, size:self.ghostRect.size)
+          }
+          
+          override func render(canvas:Canvas){
+              
+                  ghostRectangle = Rectangle(rect:ghostRect, fillMode:.fillAndStroke)
+                  if flashing{
+                      if flashFor % 5 == 0 {
+                          canvas.render(flashColor, StrokeStyle(color:Color(.gray)), LineWidth(width:2), ghostRectangle)
+                      }else{
+                          canvas.render(ghostColor, StrokeStyle(color:Color(.gray)), LineWidth(width:2), ghostRectangle)
+                      }
+                      flashFor -= 1
+                      if flashFor == 0{
+                          flashing = false
+                      }
+                  }else{
+                      canvas.render(ghostColor, StrokeStyle(color:Color(.gray)), LineWidth(width:2), ghostRectangle)
+                  }
+                  //canvas.render(FillStyle(color:Color(.white)), Rectangle(rect:self.bottomBoundingRect(), fillMode:.fill))
+              }   
+        }</code></pre><br>
+        <p>The code snippet provided earlier played a pivotal role in our Pac-Man game project, enabling us to implement dynamic ghost behavior. With this code, we programmed the ghosts to autonomously navigate the maze, complete with flashing animations to signify changes in game state. Crucially, the code included collision detection logic, ensuring that ghosts avoided walls and obstacles while maintaining fluid movement. In instances where a ghost encountered an obstacle, the code facilitated reactive movement, allowing the ghosts to intelligently maneuver away from barriers. These features collectively added depth and challenge to the gameplay, staying true to the spirit of the original Pac-Man while incorporating our own creative enhancements.</p>
+      <br>
+      <pre><code class="code">override func setup(canvasSize:Size, canvas:Canvas) {
+        coin.center = Point(x:50, y:75)
+        let xCoins = (canvasSize.width - 140) / 40
+        let yCoins = (canvasSize.height - 140) / 40
+        for y in 0...yCoins{
+            for x in 0...xCoins{
+                coin.center += Point(x:40, y:0)
+                coins.append((Ellipse(center:coin.center, radiusX:5, radiusY:5, fillMode:.fillAndStroke), true))
+            }
+            coin.center += Point(x:-((xCoins+1) * 40), y:40)
+        }
+    }
+    
+    override func render(canvas:Canvas){
+        for c in coins{
+            if c.1 == true{
+                canvas.render(FillStyle(color:Color(.goldenrod)), StrokeStyle(color:Color(.white)), c.0)
+            }
+        } 
+    }</code></pre><br>
+      <p>The code snippet provided serves as the backbone for implementing the coins within our Pac-Man game environment. Using this code, we established a model for the coins scattered throughout the maze, simulating the iconic pellets Pac-Man traditionally consumes. By leveraging this model, we generated a multitude of coins distributed strategically across the maze layout we meticulously designed. Each coin represented a pivotal element of gameplay, incentivizing players to navigate the maze efficiently while avoiding ghosts. With an abundance of coins spread across the maze, players were encouraged to explore every nook and cranny, enhancing the sense of discovery and immersion within the Pac-Man setting. Furthermore, the presence of coins not only mirrored the classic gameplay mechanics of Pac-Man but also introduced an additional layer of challenge and strategy, as players aimed to collect all coins while evading pursuing ghosts. Overall, the implementation of coins within our Pac-Man setting significantly enriched the gameplay experience, fostering a sense of nostalgia while adding new dimensions to the timeless arcade classic.</p>
+      <br>
+      <pre><code class="code">func gameOver(canvas:Canvas, win:Bool){
+      let canvasSize = canvas.canvasSize!
+      if win == true{
+          canvas.render(FillStyle(color:Color(.black)),Rectangle(rect:Rect(topLeft:Point(x:0,y:0), size:canvasSize), fillMode:.fill))
+          let winText = Text(location:canvasSize.center - Point(x:150, y:-50), text:"You Won!", fillMode:.fill)
+          winText.font = "50pt Arial"
+          canvas.render(FillStyle(color:Color(.white)), winText)
+          self.gameOver = true
+          self.win = true
+      }else{
+          canvas.render(FillStyle(color:Color(.black)),Rectangle(rect:Rect(topLeft:Point(x:0,y:0), size:canvasSize), fillMode:.fill))
+          let winText = Text(location:canvasSize.center - Point(x:150, y:-50), text:"You Lost!", fillMode:.fill)
+          winText.font = "50pt Arial"
+          canvas.render(FillStyle(color:Color(.white)), winText)
+          self.gameOver = true
+      }
+      }</code></pre><br>
+      <p>The code snippet provided marks a crucial juncture in our Pac-Man game's logic, determining the outcome based on the player's actions. In the event of victory, the game gracefully transitions to a simple black screen bearing the words "You Win!", offering a satisfying conclusion to the player's successful completion of the maze. Conversely, if the player fails—whether by colliding with a ghost—the screen modestly fades to black, displaying the phrase "You Lost!" This straightforward feedback mechanism provides a clear indication of the game's outcome without unnecessary embellishments, ensuring a seamless and intuitive user experience. These subtle transitions serve to punctuate the gameplay while maintaining a balanced tone, allowing players to focus on the challenge at hand without unnecessary distractions.</p>
+    </div>
+
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section id="ctdetails" class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs"></p>
+      <h6 class="heading font-x2">Get In Contact</h6>
+    </div>
+    <figure class="one_half first">
+      <ul class="nospace clear">
+        <li class ="block clear"><a class="faicon-linkedin" href="https://www.linkedin.com/in/james-dungan-a0632126a/" target="_blank"><i class="fab fa-linkedin"></i></a><span><strong>Connect With Me:</strong> LinkedIn</span></li>
+        <li class="block clear"><a href="mailto:jmdungan@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a> <span><strong>Contact me:</strong> jmdungan@gmail.com</span></li>
+      </ul>
+    </figure>
+    <figure class="one_half second">
+      <ul class="nospace clear">
+        <li class="block clear"><a href="https://github.com/JamesMDungan" target="_blank"><i class="fas fa-sticky-note"></i></a> <span><strong>Contact me:</strong> Visit my Github</span></li>
+        <li class="block clear"><a href="../images/demo/James-Dungan Resume.pdf" target="_blank"><i class="fas fa-folder-open"></i></a> <span><strong>My Resume:</strong> Come take a look!</span></li>
+      </ul>
+    </figure>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay row4" style="background-image:url('images/demo/Hex.jpg');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h1 class="logoname"><a href="index.html">Digital<span>P</span>ortfolio</a></h1>
+      <p>"Thanks for exploring my digital space! Feel free to connect or explore more using the navigation above. -James</p>
+
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
