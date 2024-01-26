@@ -10,7 +10,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <html lang="">
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-<title>Projects</title>
+<title>Fighting Game</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -69,9 +69,11 @@ Licence URI: https://www.os-templates.com/template-terms
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Fighting-Game.html">Fighting-Game</a></li>
     </ul>
     <article>
-      <h3 class="heading">Projects</h3>
+      <h3 class="heading"><B>Fighting Game</B></h3>
+      <h4 class="heading">A JavaScript Fighting game</h4>
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -81,58 +83,26 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <div class="wrapper row3">
   <main class="hoc container clear"> 
+    <div class ="content">
+        <h1>Fighting Game</h1>
+        <p>In this solo endeavor, "JavaScript Fighter: Solo Showdown," I embarked on a challenging yet rewarding journey to develop a captivating fighting game inspired by the legendary Street Fighter series, driven solely by my passion for both coding and gaming. Drawing upon my expertise in JavaScript programming, I meticulously crafted every aspect of the game, from the dynamic combat mechanics to the intricate character animations, with the aim of delivering an immersive and exhilarating gameplay experience.</p>
+        <p>At the heart of this project lies my deep understanding of JavaScript's capabilities, as I leveraged its versatility to implement a robust combat system that faithfully captures the essence of classic arcade brawlers. Through meticulous coding and iterative refinement, I crafted responsive player controls, formidable opponent AI, and visually stunning special moves, ensuring that each battle in "JavaScript Fighter: Solo Showdown" is as intense and engaging as its inspiration.</p>
+        <p>Throughout the development process, I encountered numerous technical challenges and obstacles, from optimizing performance to debugging complex interactions between game elements. However, each hurdle presented an opportunity for growth, pushing me to expand my coding skills, experiment with new techniques, and ultimately emerge with a deeper understanding of JavaScript game development.</p>
+        <p>As "JavaScript Fighter: Solo Showdown" steps onto the stage of the gaming world, it stands as a testament to the creativity, dedication, and technical prowess of a lone developer. With its blend of nostalgic charm and cutting-edge programming, this project invites players to embark on a solo journey into the adrenaline-fueled world of arcade combat, where every punch, kick, and combo is a testament to the power of individual innovation in the realm of game development. So, prepare for the ultimate showdown, as "JavaScript Fighter: Solo Showdown" invites you to unleash your inner warrior and prove your skills in the arena of digital combat!</p>
+        <pre><code="code">function rectangularCollision({ rectangle1, rectangle2 }) {
+            return (
+                rectangle1.attackBox.position.x + rectangle1.attackBox.width >= rectangle2.position.x && 
+                rectangle1.attackBox.position.x <= rectangle2.position.x + rectangle2.attackBox.width && 
+                rectangle1.attackBox.position.y + rectangle1.attackBox.height >= rectangle2.position.y &&
+                rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
+            )
+        }</code></pre>
+        <p>The Code above is a simple hitbox detector this detects if the enemy player is within range of your weapon, if they are within range and you have attacked then it will trigger depleting the enemy players health</p>
+    </div>
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content"> 
-      <!-- ################################################################################################ -->
-      <div id="gallery">
-        <figure>
-          <header class="heading">My Projects</header>
-          <ul class="nospace clear">
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Decision-bias.html" target="_blank"><img src="../images/demo/Decision.JPG" alt=""></a>
-                <figcaption><strong>Allen Cyber Invitational</strong><em>Regional Cyber Competiton</em></figcaption>
-              </figure>
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Fighting-Game.html" target="_blank"><img src="../images/demo/Street Fighter 2.jpg" alt=""></a>
-                <figcaption><strong>Street fighter </strong> <em>A JavaScript Fighting game</em></figcaption>
-              </figure>
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Pacman.html" target="_blank"><img src="../images/demo/Pac-man.png" alt=""></a>
-                <figcaption><strong>Pacman</strong> <em>My CS-1 ISP</em></figcaption>
-              </figure>
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Ludicrous.html" target="_blank"><img src="../images/demo/Goose.jpg" alt=""></a>
-                <figcaption><strong>Ludicrous Inc. </strong> <em>My CS-2 ISP</em></figcaption>
-              </figure>
-
-          </ul>
-        </figure>
-      </div>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-    <!---  <nav class="pagination">
-        <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">6</a></li>
-          <li class="current"><strong>7</strong></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">14</a></li>
-          <li><a href="#">15</a></li>
-          <li><a href="#">Next &raquo;</a></li>
-        </ul>
-      </nav>
-    -->
-      <!-- ################################################################################################ -->
-    </div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
-    <div class="clear"></div>
   </main>
 </div>
 <!-- ################################################################################################ -->

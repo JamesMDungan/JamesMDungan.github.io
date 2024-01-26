@@ -10,7 +10,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <html lang="">
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-<title>Projects</title>
+<title>Ludicrous</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -69,9 +69,11 @@ Licence URI: https://www.os-templates.com/template-terms
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Ludicrous.html"></a>Ludicrous</li>
     </ul>
     <article>
-      <h3 class="heading">Projects</h3>
+      <h3 class="heading"><B>Ludicrous:</B> Jan-2022</h3>
+      <h4 class="heading">my third year ISP</h4>
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -81,58 +83,31 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <div class="wrapper row3">
   <main class="hoc container clear"> 
+    <div class ="content">
+        <h1>Ludicrous</h1>
+        <p>In our computer science endeavor, "Ludicrous Goose: Boss Brawls," we embarked on a journey that seamlessly merged the realms of game design and programming expertise. Our team, driven by a shared passion for both creativity and technical innovation, set out to develop a captivating gaming experience within the Roblox ecosystem. Through meticulous planning and collaborative effort, we conceptualized a world where players embody audacious geese navigating through a series of whimsical battles against a diverse array of eccentric bosses.</p>
+        <p>The heart of our project lay in the intricate integration of Lua scripting, where we meticulously crafted dynamic gameplay mechanics and robust artificial intelligence systems to bring our imaginative world to life. From designing boss behaviors that adapt to player actions to implementing customizable player avatars with unique abilities, every aspect of "Ludicrous Goose: Boss Brawls" was meticulously engineered to deliver an immersive and engaging experience. Moreover, our journey through this project provided invaluable opportunities for learning and growth, as we tackled complex programming challenges, refined our problem-solving skills, and explored the intersection of computer science and game development.</p>
+        <p>As "Ludicrous Goose: Boss Brawls" takes flight on the Roblox platform, we are excited to share our creation with players worldwide. Beyond its whimsical façade lies a testament to the power of computer science in shaping immersive and entertaining gaming experiences. We invite players to join us in this hilariously epic adventure, where the absurdity of our imagination meets the technical prowess of computer science, promising endless hours of laughter, excitement, and memorable encounters.</p>
+        <pre><code class="code">local function UpdateWeaponValues(dt)
+            local CurrentEquippedWeapon = Backpack[CurrentEquippedSlot]
+            if not CurrentEquippedWeapon then return end
+            
+            local AmmoCount = CurrentEquippedWeapon.Ammo
+            if AmmoCount and typeof(AmmoCount) == "number" then 
+                UpdateAmmo(AmmoCount)
+            end
+            
+            local Category = CurrentEquippedWeapon.Category
+            if Category and typeof(Category) == "string" then
+                UpdateCategory(Category)
+            end
+        end</code></pre> <br>
+        <p>The Code above is a function that updates the gun and ammo type of the user whenever the player changes to a new weapon.</p>
+    </div>
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content"> 
-      <!-- ################################################################################################ -->
-      <div id="gallery">
-        <figure>
-          <header class="heading">My Projects</header>
-          <ul class="nospace clear">
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Decision-bias.html" target="_blank"><img src="../images/demo/Decision.JPG" alt=""></a>
-                <figcaption><strong>Allen Cyber Invitational</strong><em>Regional Cyber Competiton</em></figcaption>
-              </figure>
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Fighting-Game.html" target="_blank"><img src="../images/demo/Street Fighter 2.jpg" alt=""></a>
-                <figcaption><strong>Street fighter </strong> <em>A JavaScript Fighting game</em></figcaption>
-              </figure>
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Pacman.html" target="_blank"><img src="../images/demo/Pac-man.png" alt=""></a>
-                <figcaption><strong>Pacman</strong> <em>My CS-1 ISP</em></figcaption>
-              </figure>
-            <li class="one_quarter">
-              <figure><a class="imgover" href="Ludicrous.html" target="_blank"><img src="../images/demo/Goose.jpg" alt=""></a>
-                <figcaption><strong>Ludicrous Inc. </strong> <em>My CS-2 ISP</em></figcaption>
-              </figure>
-
-          </ul>
-        </figure>
-      </div>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-    <!---  <nav class="pagination">
-        <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">6</a></li>
-          <li class="current"><strong>7</strong></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">14</a></li>
-          <li><a href="#">15</a></li>
-          <li><a href="#">Next &raquo;</a></li>
-        </ul>
-      </nav>
-    -->
-      <!-- ################################################################################################ -->
-    </div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
-    <div class="clear"></div>
   </main>
 </div>
 <!-- ################################################################################################ -->
